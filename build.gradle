@@ -13,10 +13,22 @@ repositories {
 }
 
 dependencies {
+	//Basic web dependencies
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	//Thymeleaf for dynamic content rendering in html from database
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	//lombok to reduce boiler plate code
+	annotationProcessor 'org.projectlombok:lombok'
+	compileOnly 'org.projectlombok:lombok'
+
+	//persistance for storing data
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	//mysql connector
 	runtimeOnly 'com.mysql:mysql-connector-j'
 }
 
