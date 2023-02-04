@@ -1,22 +1,21 @@
-package com.example.hpos.dto;
+package com.example.hpos.entities;
 
-
-
-import jakarta.persistence.Lob;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Date;
 
-
-
+@Entity
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class DoctorDTO {
-
-    private int eid;
+@AllArgsConstructor
+@Table(name = "Doctors")
+public class Doctor {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int EId;
     private String FirstName;
     private String LastName;
     private String Gender;
@@ -27,7 +26,5 @@ public class DoctorDTO {
     private String city;
     private String state;
     private String role;
-    private String specialist;
-
 
 }

@@ -1,6 +1,5 @@
 package com.example.hpos.entities;
 
-import com.example.hpos.dto.DoctorDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,6 +12,7 @@ import java.sql.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "Employees")
 public class Employee {
     @Id
     private int EId;
@@ -28,19 +28,7 @@ public class Employee {
     private String role;
 
 
-    public Employee(DoctorDTO doctor){
-        this.EId = doctor.getEid();
-        this.FirstName = doctor.getFirstName();
-        this.LastName = doctor.getLastName();
-        this.Gender = doctor.getGender();
-        this.DOB = doctor.getDOB();
-        this.mobile = doctor.getMobile();
-        this.email = doctor.getEmail();
-        this.address = doctor.getAddress();
-        this.city = doctor.getCity();
-        this.state = doctor.getState();
-        this.role = doctor.getRole();
 
-    }
+
 
 }

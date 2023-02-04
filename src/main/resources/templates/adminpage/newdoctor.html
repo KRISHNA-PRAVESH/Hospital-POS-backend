@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>New Doctor</title>
@@ -135,6 +135,9 @@
 			</div>
 		</div>
 		<!-- End Sidebar -->
+<!--		<div th:if="${message}">-->
+<!--			<h3 th:text="${message}"></h3>-->
+<!--		</div>-->
 
 		<div class="main-panel">
 			<div class="content">
@@ -148,10 +151,7 @@
 								<div class="card-body">
 									<div class="row">
 										<div class="col-md-6 col-lg-4">
-											<div class="form-group">
-												<label for="eid">E-ID</label>
-												<input type="text" class="form-control" id="" name="eid" placeholder="Enter First Name">
-											</div>
+
 											<div class="form-group">
 												<label for="fname">First Name</label>
 												<input type="text" class="form-control" id="" name="FirstName" placeholder="Enter First Name">
@@ -240,7 +240,7 @@
 									</div>
 
 									<div class="card-action">
-										<button class="btn btn-success" type="submit">Add</button>
+										<button class="btn btn-success"  type="submit">Add</button>
 
 									</div>
 								</div>
