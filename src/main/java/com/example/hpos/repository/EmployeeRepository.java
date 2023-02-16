@@ -1,4 +1,4 @@
-package com.example.hpos.repositories;
+package com.example.hpos.repository;
 
 import com.example.hpos.entities.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;

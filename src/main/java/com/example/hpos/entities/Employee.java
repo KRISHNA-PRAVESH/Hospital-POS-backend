@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.management.Query;
 import java.sql.Date;
 
 
@@ -15,6 +16,7 @@ import java.sql.Date;
 @Table(name = "Employees")
 public class Employee {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int EId;
     private String FirstName;
     private String LastName;
@@ -26,9 +28,6 @@ public class Employee {
     private String city;
     private String state;
     private String role;
-
-
-
-
+    private String specialist;
 
 }

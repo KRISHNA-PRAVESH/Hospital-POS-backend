@@ -1,7 +1,7 @@
 package com.example.hpos.controllers;
 
-import com.example.hpos.entities.Doctor;
-import com.example.hpos.services.DoctorService;
+import com.example.hpos.entities.Employee;
+import com.example.hpos.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class AdminController {
 
     @Autowired
-    private DoctorService doctorService;
-
+    private EmployeeService employeeService;
     @GetMapping("/admin/dashboard")
     public String dashboard(){
         return "adminpage/dashboard";
@@ -38,10 +37,10 @@ public class AdminController {
         return "adminpage/newreceptionist";
     }
 
-    @PostMapping("/admin/add-doctor")
+    @PostMapping("/admin/add-employee")
     @ResponseBody
-    public Doctor addTest(@ModelAttribute Doctor doctor){
-        return doctorService.saveDoctor(doctor);
+    public Employee addEmployee(@ModelAttribute Employee employee){
+        return employeeService.saveEmployee(employee);
     }
 
 
